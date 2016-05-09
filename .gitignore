@@ -62,11 +62,11 @@ target/
 .ipynb_checkpoints
 
 #data files
-.log
-.sqlite
-.jpeg
-.png
-.jpg
-.db
-.txt
-.gif
+*.log
+*.sqlite3
+*.jpeg
+*.png
+*.jpg
+*.db
+*.txt
+*.gif
