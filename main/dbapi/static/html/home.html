@@ -1,0 +1,45 @@
+<div class="jumbotron fluid-jumbotron">
+	<div class="container">
+		<h1 class="display-3">Welcome!</h1>
+		<p class="lead">Some insightful quote here...</p>
+	</div>
+</div>
+<div class="row row-centered">
+	<div class="col-sm-5 col-centered v-top">
+		<div class="card noborder">
+			<div class="card-block">
+				<h4>Greetings Traveller</h4>
+				<p>
+					I'm an Engineering student, programmer, photographer, black-belt, gamer among much else. This website is a portfolio of the work I've done, pictures I've taken and thoughts I've had. I'm always up to meet new people and work on new projects as much as my degree will let me so if you want to get in touch you can <a ng-src="">contact me</a> via email.
+				</p>
+				<p>
+					I wrote this website myself; the backend is written in Python - my favourite language - with Django REST and the frontend is a mix of jQuery and AngularJS with a healthy sprinkling of Bootstrap to save time. If you are interested in the design of the site you can fork it on <a>GitHub</a>.
+				</p>
+				<p>
+					If you have read this far I don't know what else I can say... Go poke around at the rest of the site! 
+				</p>
+			</div>
+		</div>
+	</div> 
+	<div class="col-sm-3 col-centered max-width">
+		<a class="default-a" href="#/blog">
+			<div class="card max-width" id="latest-post">
+				<img class="card-img-top max-width img-center" ng-src="{{photo}}">
+				<div class="card-block" id="latest-post-text">
+					<h4 class="nomarg">{{latest.title}}</h4>
+					<p class="mini-faded nomarg">{{latest.date}}</p>
+					<div class="fade-text" ng-bind-html="latest.body"></div>
+				</div>
+			</div>
+		</a>
+		<div class="card max-width" id="latest-post">
+			<a class="default-a" href="#/about">
+				<img class="card-img-top max-width img-center" ng-src="">
+				<div class="card-block" id="latest-post-text">
+					<h4>About Me</h4>
+					<p class="fade-text">Some stuff about who I amfdjhsal fhsdkj hfkjsdhf kjhsdfjkshdj kfhsdkj fhkjsdhfkjsdhf kjhs djkfhsdkjhf jsdkhf kjsd fjkhsdjkfhskjhfksjhfkshdkfhsdkjhfskdjhfkjshdfkjhsdkjfsdkjhfkksdhfkjsdhfkjhsddfkjhsdkfjhsdkjfhsdlkfhkjldshfkjsdhfkjlkjlfhsdkjlfhsdkjhfskjhfkjsdhfkljsdhfkjsfkjdfkjsdhfkjsjkfhdfkjhsdkfjhsdkjfhsdkjfhsjkfhjksdfhjksadhfjkslhfkjlsdhfjkshfjkhsdjfhasjkldfaaahkjfhjfkhdsfkjlhjfkhdskljfhfsdlkjhfjriueuyeryeriuwoeryeuiwryiwoeqryeworyweiuqrweyriweyrioewyeiruoyqweoiryruieyeriorueoryweoieuryweoryuieworyuiwoevncxz,vmnbxcvmnzxbcvmnxczbvmn,cxbzvm,nzcxbvmcx,bvcmncxbvmncxbvnmcvbcmnvbmnxczvbm,znxcb</p>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>

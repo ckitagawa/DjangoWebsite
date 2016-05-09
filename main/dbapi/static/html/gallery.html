@@ -1,0 +1,47 @@
+<div class="container-fluid top-pad">
+	<div class="row row-centered">
+		<div ng-init="isFullscreen=false;" class="col-sm-8 col-centered col-sm-push-1">
+			<div ng-click="isFullscreen = !isFullscreen" ng-class="{fullscreen: isFullscreen}" id="gallery-img" class="card-img gallery-card">
+				<img class="card-img collection-img" ng-src="{{content[index].image}}" ng-class="{fade: startFade, fadein: startFadein, hidden: hide}">
+				<div class="card-img-overlay"></div>
+			</div>
+		</div>
+		<div class="col-sm-1 col-centered col-sm-pull-8">
+			<div class="centered-block">
+				<a ng-if="index!=0" class="none l"><i ng-click="decrement();" class="interactive fa fa-chevron-left fa-scale navi-icon"></i></a>
+			</div>
+		</div>
+		<div class="col-sm-1 col-centered">
+			<div class="centered-block">
+				<a ng-if="index!=content.length - 1" class="none r"><i ng-click="increment();" class="left interactive fa fa-chevron-right fa-scale navi-icon"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="row row-centered top-padding">
+		<div class="col-sm-8 col-centered">
+			<div id="description" class="card">
+					<div class="card-block">
+						<h4>{{content[index].title}}</h4>
+						<p class="caption">{{content[index].caption}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="thumb-row" class="row row-centered top-padding">
+		<div class="col-xs-12 col-centered">
+			<div class="card noborder">
+				<div class="thumb-height card-block">
+					<div class="thumbswrapper">
+					    <div class="thumbwrapper interactive" ng-repeat="image in content track by $index">
+					        <a class="auto-height" ng-href="" ng-click="setindex($index)">
+					            <img class="thumbnail" ng-src="{{image.image}}">
+					        </a>
+					    </div>
+				   	</div>
+			   	</div>
+		    </div>
+		</div>
+	</div>
+</div>
+

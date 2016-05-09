@@ -1,0 +1,94 @@
+{% load staticfiles %}
+<!-- ^Django call to load staticfiles -->
+
+<html>
+
+	<!-- Load all of the things -->
+	<head>
+		<!-- META: -->
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	    <!-- JS: -->
+		<script type="text/javascript" src="{{ STATIC_URL }} /static/js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }} /static/js/angular.min.js"></script> 
+		<script type="text/javascript" src="{{ STATIC_URL }} /static/js/angular-route.min.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }} /static/js/angular-cookies.min.js"></script>  
+		<script type="text/javascript" src="{{ STATIC_URL }} /static/js/tether.min.js"></script> 
+		<script type="text/javascript" src="{{ STATIC_URL }} /static/js/bootstrap.min.js"></script> 
+		<!--<script type="text/javascript" src="{{ STATIC_URL }} /static/js/angular-ui-router.js"></script>-->
+		<!--<script type="text/javascript" src="{{ STATIC_URL }} /static/js/angular-storage.js"></script>-->
+		<script type="text/javascript" src="{{ STATIC_URL }} /static/js/require.js"></script> 
+		<script type="text/javascript" src="{{ STATIC_URL }} /static/js/app.js"></script> 
+
+		<!-- CSS: -->
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }} /static/css/tether.min.css">
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }} /static/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }} /static/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }} /static/css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- Header: -->
+			<nav class="navbar navbar-light bg-faded navbar-fixed-top" id="header-wrapper">
+				<div class="nav navbar-nav pull-left" id="menu-btn">
+					<i class="interactive fa fa-bars fa-lg icon .fa-scalem" id="sidenav-toggle"></i>
+				</div>
+
+				<div class="nav navbar-nav center-nav" id="brand">
+					CALDER KITAGAWA
+				</div>
+
+				<div class="nav navbar-nav pull-right" id="follow">
+					<a href="https://github.com/ckitagawa"><i class="interactive fa fa-github fa-lg icon .fa-scalem" id="github"></i></a>
+					<a href="https://www.linkedin.com/in/calder-kitagawa-a75596ab"><i class="interactive fa fa-linkedin fa-lg icon .fa-scalem" id="linkedin"></i></a>
+				</div>
+			</nav>
+
+			<!-- Sidenav: -->
+			<div class="navbar navbar-inverse navbar-fixed-top closed" id="sidebar-wrapper" role="navigation">
+				<ul class="nav sidebar-nav">
+					<li id="Home">
+						<a href="#" class="interactive nav-link">Home</a>
+					</li>
+					<li id="Blog">
+						<a href="#/blog" class="interactive nav-link">Blog</a>
+					</li>
+					<li id="Teams">
+						<a href="#/teams" class="interactive nav-link">Teams</a>
+					</li>
+					<li id="Projects">
+						<a href="#/projects" class="interactive nav-link">Projects</a>
+					</li>
+					<li id="Photography">
+						<a href="#/photography" class="interactive nav-link">Photography</a>
+					</li>
+					<li id="AboutMe">
+						<a href="#/about" class="interactive nav-link">About Me</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Content: (Dynamically loaded as SPA with angular) -->
+			<div class="container-fluid" id="content-wrapper" ng-app="main">
+				{% verbatim %}
+				<!-- Angular will load pages into here -->
+				<div id="loader" ng-controller="mainCtrl">
+					<div ng-view>
+						<!-- Stuff gets loaded here -->
+					</div>
+				</div>
+				{% endverbatim %}
+			</div>
+			<div class="push"></div>
+		</div>
+		<!-- Footer: -->
+		<footer class="navbar navbar-light bg-faded footer" id="footer-wrapper">
+			<div id="about" class="container">
+				<p class="nomarg">Copyright<i class="fa fa-copyright fa-sm icon"></i>2016
+				<br>Works best on: <i class="fa fa-chrome fa-sm icon"></i></p>
+			</div> 
+		</footer>
+	</body>
+</html>

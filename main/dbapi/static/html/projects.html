@@ -1,0 +1,9 @@
+<div class="container-fludi top-pad">
+	<a ng-repeat="category in categories" ng-click="npk(category.pk)" href="#/projects/{{category.name | lowercase}}">
+		<div class="jumbotron fluid-jumbotron cat-height">
+			<div class="container">
+				<p class="display-4 center-lead">{{category.name}}</p>
+			</div>
+		</div>
+	</a>
+</div>

@@ -1,0 +1,14 @@
+<div class="row row-centered top-pad">
+	<div class="col-sm-7 col-centered">
+		<div ng-repeat="post in posts track by $index">
+			<div class="card noborder">
+				<div class="card-block">
+					<h4>{{post.title}}</h4>
+					<p>{{post.date}}</p>
+					<div dynamic="post.body"></div>
+				</div>
+			</div>
+			<hr>
+		</div>
+	</div>
+</div>

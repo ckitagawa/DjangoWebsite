@@ -1,0 +1,16 @@
+<div class="row row-centered">
+	<div class="col-sm-8 col-centered top-pad">
+		<div class="container max-width max-height" ng-repeat="project in projects" ng-init="pic['id'+project.pk]=0">
+			<div class="card card-inverse top-bot-pad interactive-e project-card" ng-click="pic['id'+project.pk]=increment(project.pk, pic['id'+project.pk])">
+				<img class="card-img max-width" ng-src="{{photos[project.pk][pic['id'+project.pk]].image}}">
+				<div class="card-img-overlay project-text">
+					<h1 class="card-title project-title">{{project.title}}</h1>
+					<h5 class="card-title project-role">{{project.date}}</h5>
+					<p class="card-text project-desc">{{project.description}}</p>
+					<p class="card-text project-caption">{{photos[project.pk][pic['id'+project.pk]].caption}}</p>
+					<span ng-repeat="item in range(project.pk) track by $index"><i class="project-photo-marker" ng-style="{'right': 20 + $index * 7}" ng-class="{'bk': cnt(project.pk)-($index) == pic['id'+project.pk]}">|</i></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
